@@ -249,6 +249,12 @@ http://<EC2-public-ip>/
 - CRUD operations were tested successfully from the browser UI.
 - Data persistence was verified in MongoDB.
 
+**Screenshots included:**
+
+- **CI/CD configuration** – screenshot of `.github/workflows` in GitHub UI.
+- **CI/CD run** – screenshot of a successful Actions run.
+- **Docker images build & push** – screenshot of terminal or Docker Hub UI.
+- **App working UI** – browser screenshot showing the CRUD interface.
 ---
 
 ## Key Configuration Files
@@ -284,4 +290,5 @@ This project demonstrates a complete real-world DevOps workflow involving:
 
 
 ---
+
 
