@@ -1,6 +1,7 @@
 version: '3.8'
 
 services:
+  # MongoDB
   mongo:
     image: mongo:6
     container_name: crud-mongo
@@ -12,6 +13,7 @@ services:
     volumes:
       - mongo-data:/data/db
 
+  # Backend
   backend:
     image: dharani1603/crud-backend:latest
     container_name: crud-backend
@@ -23,15 +25,15 @@ services:
     depends_on:
       - mongo
 
+  # Frontend
   frontend:
     image: dharani1603/crud-frontend:latest
     container_name: crud-frontend
     restart: unless-stopped
-    ports:
-      - "4200:80"
     depends_on:
       - backend
 
+  # Nginx Reverse Proxy
   nginx:
     image: nginx:latest
     container_name: crud-nginx
